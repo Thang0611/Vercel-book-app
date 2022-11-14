@@ -107,7 +107,7 @@ const columnDefs = [
  // Example load data from sever
 const handleGetListBook= async ()=>{
   setLoading(true)
-  axios.get('http://localhost:8080/api/get-books')
+  axios.get('https://server-book-app.herokuapp.com/api/get-books')
   .then(function (response) {
     // handle success
     setLoading(false)
@@ -137,7 +137,7 @@ const handleLogin=()=>{
 const handleDelete= async (params)=>{
   setLoading(true)
   console.log(params.data._id)
-  await axios.delete(`http://localhost:8080/api/delete-book/${params.data._id}`)
+  await axios.delete(`https://server-book-app.herokuapp.com/api/delete-book/${params.data._id}`)
     .then((res)=> {
       console.log( res )
    

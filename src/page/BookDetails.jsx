@@ -50,7 +50,7 @@ function BookDetails() {
   console.log(params)
   const handleGetDataDetail=async()=>{
     setLoadingPage(true)
-    axios.get(`http://localhost:8080/api/detail-book/${params.id}`)
+    axios.get(`https://server-book-app.herokuapp.com/api/detail-book/${params.id}`)
     .then(function (response) {
       // handle success
       setLoadingPage(false)
@@ -120,7 +120,7 @@ const handleCancelFix=()=>{
 const handleSave= async (data)=>{
   setLoading(true)
   try {
-    const { data: res } = await axios.put(`http://localhost:8080/api/update-book/${bookDetail._id}`, data);
+    const { data: res } = await axios.put(`https://server-book-app.herokuapp.com/api/update-book/${bookDetail._id}`, data);
     console.log(res)
     if(res.success){
       setLoading(false)
@@ -137,7 +137,7 @@ const handleSave= async (data)=>{
   const handleAddBook=async (data)=>{ 
     
     try {
-      const { data: res } = await axios.post('http://localhost:8080/api/add-book', data);
+      const { data: res } = await axios.post('https://server-book-app.herokuapp.com/api/add-book', data);
       console.log(res)
       if(res.success){
         setLoading(false)

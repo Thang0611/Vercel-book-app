@@ -13,7 +13,7 @@ function Register() {
   const navigate = useNavigate();
   const handleCreateAccOk=async (data)=>{ 
     try {
-      const { data: res } = await axios.post('http://localhost:8080/api/register', data);
+      const { data: res } = await axios.post('https://server-book-app.herokuapp.com/api/register', data);
       console.log(res)
 
      if(res.success ) {

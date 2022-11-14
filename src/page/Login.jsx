@@ -11,7 +11,7 @@ function Login() {
 
   const handleLogin= async (data)=>{ 
     try {
-      const { data: res } = await axios.post('http://localhost:8080/api/login', data);
+      const { data: res } = await axios.post('https://server-book-app.herokuapp.com/api/login', data);
       console.log(res)
 
      if(res.access ) {
